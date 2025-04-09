@@ -1,5 +1,6 @@
 import React from "react";
 import './Table.css';
+import './style.scss';
 
 export default function Table() {
     const data = [

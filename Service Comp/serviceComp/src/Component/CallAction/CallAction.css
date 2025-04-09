@@ -1,0 +1,36 @@
+.action-main {
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+  
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+  
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .call-btn {
+      padding: 12px 30px;
+      font-size: 1rem;
+      background: transparent;
+      border: 2px solid black;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+  
+      &:hover {
+        background: blue;
+        color: #1d3557;
+      }
+    }
+  }
+  

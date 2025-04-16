@@ -1,0 +1,42 @@
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  width: 400px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .login-input {
+    padding: 10px;
+    margin: 20px;
+    width: 90%;
+    
+  }
+  input.login-input{
+    border: 1px solid black;
+
+  }
+  h4.login-input{
+    font-weight: 200;
+  }
+  button.login-input {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: darkgreen;
+      cursor: pointer;
+    }
+  }
+  
+
+}

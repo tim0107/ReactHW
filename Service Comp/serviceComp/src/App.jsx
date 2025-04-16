@@ -1,17 +1,20 @@
-import './App.css'
-import Header from './Component/Header/Header'
-import Options from './Component/Options/Options'
-import CallAction from './Component/CallAction/CallAction'
+import './App.css';
+import Header from './Component/Header/Header';
+import Options from './Component/Options/Options';
+import CallAction from './Component/CallAction/CallAction';
+import Render from './Component/Render/Render';
+import Login from './Component/Login/Login';
 
 function App() {
-
   return (
     <>
-      <Header/>
+      {/* <Header/>
        <Options/>
-       <CallAction/>
+       <CallAction/> */}
+      {/* <Render/> */}
+      <Login />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

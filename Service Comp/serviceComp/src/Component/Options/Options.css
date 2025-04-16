@@ -4,7 +4,7 @@
   gap: 24px;
   padding: 40px;
 
-  .option-card {
+  main-card {
     background: white;
     overflow: hidden;
     border: solid 1px black;

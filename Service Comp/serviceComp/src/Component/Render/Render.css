@@ -1,0 +1,11 @@
+.render-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 40px;
+}
+
+.render-div img {
+  width: 100%;
+  height: auto;
+}

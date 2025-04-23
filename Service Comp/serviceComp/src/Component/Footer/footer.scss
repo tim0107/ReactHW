@@ -1,0 +1,97 @@
+.footer {
+  background-color: #fff;
+  padding: 40px;
+  color: #1a1a1a;
+  border-top: 1px solid #eee;
+  text-align: left;
+
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+
+    .footer-section {
+      flex: 1;
+
+      h4 {
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 6px 0;
+          color: #333;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      .social-icons {
+        display: flex;
+        gap: 10px;
+
+        .icon-circle {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #eee;
+        }
+      }
+      &.logo-section {
+        flex: 2;
+
+        .logo-wrap {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          margin-bottom: 15px;
+        }
+
+        .brand {
+          font-size: 20px;
+          font-weight: bold;
+          color: #1a1a1a;
+        }
+
+        p {
+          margin: 8px 0;
+          color: #444;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    text-align: left;
+    font-size: 13px;
+    color: #777;
+
+    p {
+      margin: 3px 0;
+    }
+  }
+  .dot {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+
+    .purple-dot {
+      background-color: #9b5de5;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .pink-pill {
+      background-color: #ff69b4;
+      width: 10px;
+      height: 24px;
+      border-radius: 999px;
+    }
+  }
+}

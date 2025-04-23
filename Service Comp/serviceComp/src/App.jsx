@@ -1,19 +1,18 @@
 import './App.css';
-import Header from './Component/Header/Header';
-import Options from './Component/Options/Options';
-import CallAction from './Component/CallAction/CallAction';
-import Render from './Component/Render/Render';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Layout from './Component/Layout/Layout';
 import Login from './Component/Login/Login';
 
 function App() {
   return (
-    <>
-      {/* <Header/>
-       <Options/>
-       <CallAction/> */}
-      {/* <Render/> */}
-      <Login />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navigate to="/layout" />} />
+        <Route path="/signIn" element={<Login />} />
+        <Route path="/layout" element={<Layout />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

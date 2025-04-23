@@ -1,0 +1,84 @@
+.main-banner {
+  .banner-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .sub-navbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dot {
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+    }
+
+    .orange-dot {
+      background-color: #9b5de5;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    .purpole-dot {
+      background-color: #ff69b4;
+      width: 14px;
+      height: 40px;
+      border-radius: 999px;
+    }
+
+    .btn-banner {
+      background-color: #a064e7;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+  }
+
+  .banner-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    text-align: left;
+
+    h1 {
+      font-size: 80px;
+      font-weight: 500;
+    }
+
+    h3 {
+      width: 600px;
+      font-weight: 300;
+      color: grey;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100;
+      height: auto;
+      z-index: -1;
+    }
+    .btn {
+      background-color: #a064e7;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-size: 14px;
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+  }
+}

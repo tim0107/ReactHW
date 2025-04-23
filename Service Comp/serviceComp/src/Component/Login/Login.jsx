@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Login.scss';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const navigate = useNavigate();
+
   const [input, setInput] = useState({
     email: '',
     password: '',
   });
 
-  const [error, setError] = useState();
-
-  const [loginData, setLoginData] = useState();
+  const [error, setError] = useState('');
+  const [loginData, setLoginData] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,28 +27,34 @@ export default function Login() {
       const res = await axios.post('https://reqres.in/api/login', input);
       setLoginData(res.data);
       setError('');
+      localStorage.setItem('token', res.data.token); 
+      navigate('/layout'); 
     } catch (err) {
-      setLoginData('');
-
-      setError('Login failed');
-      console.error(err.response?.data, err.message);
+      setLoginData(null);
+      setError('Login failed. Please check your credentials.');
+      console.error(err.response?.data || err.message);
     }
   };
 
+  // If already logged in, redirect to /layout
   useEffect(() => {
-    if (loginData) {
-      console.log(loginData);
+    const existingToken = localStorage.getItem('token');
+    if (existingToken) {
+      navigate('/layout');
     }
-  }, [loginData]);
+  }, [navigate]);
 
   return (
     <div className="login">
+      <h2 className="login-title">Login</h2>
+
       <input
         className="login-input"
         name="email"
         onChange={handleChange}
         value={input.email}
-        placeholder="Username"
+        placeholder="Email"
+        type="email"
       />
       <input
         className="login-input"
@@ -56,14 +64,12 @@ export default function Login() {
         type="password"
         placeholder="Password"
       />
-      <button onClick={handleLogin} className="login-input">
+
+      <button onClick={handleLogin} className="login-input login-button">
         Login
       </button>
-      {loginData && loginData.token ? (
-        <h2 className="login-input login-btn">Token: {loginData.token}</h2>
-      ) : error ? (
-        <h2 className="error-message">{error}</h2>
-      ) : null}
+
+      {error && <h4 className="error-message">{error}</h4>}
 
       <h4 className="login-input">Not registered? Create an account</h4>
     </div>

@@ -1,0 +1,31 @@
+.cart-main{
+    padding-left: 100px;
+}
+.menu {
+    width: 30%;
+    border: 1px solid black;
+    padding: 20px;   
+}
+
+.menu .sub-menu {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.display-cart{
+    border: 1px solid black;
+    width: 30%;
+    padding: 20px; 
+    margin-top: 100px;  
+}
+ul li {
+    padding: 10px;
+    list-style-type: none;
+
+}
+
+ul li button {
+    margin-left: 10px;
+    
+}

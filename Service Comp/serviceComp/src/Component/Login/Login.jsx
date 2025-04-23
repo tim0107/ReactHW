@@ -36,7 +36,6 @@ export default function Login() {
     }
   };
 
-  // If already logged in, redirect to /layout
   useEffect(() => {
     const existingToken = localStorage.getItem('token');
     if (existingToken) {
